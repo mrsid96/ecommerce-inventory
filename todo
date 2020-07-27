@@ -1,0 +1,19 @@
+Accounts Module
+------------------
+1. Add KYC Block, which will have KYC Status, and KYC Data.
+2. Add Payment Modes, which will have redacted details for payments.
+3. Add recommendations, which will contain tags, basics of user purchase history and recommends from Inventory
+4. Seller's Account
+5. Proper User management, with ACLs
+
+Inventory Module
+------------------
+1. Single Inventory item can be mapped against multiple sellers
+2. Have offers sections, where depending on the payment mode selected, offers to be applied
+3. Seller can add items in inventory
+
+Orders Module
+------------------
+1. Cancellation request to be raised to seller
+2. Can order multiple items from inventory
+3. Authorizing users, before doing write operations in orders

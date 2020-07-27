@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce-inventory",
+  "version": "1.0.0",
+  "description": "NodeJS web application which creates Orders for an ecommerce flow. The application consist of Orders, Account, and Inventory collections.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sidharth Patnaik (https://sidharthpatnaik.in/)",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "fastify": "^3.1.1",
+    "fastify-swagger": "^3.1.2",
+    "mongoose": "^5.9.25"
+  }
+}

@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "097e6086-b133-4799-9866-0750d2b01efe",
+		"name": "Ecommerce-Inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Add Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sidharth Patnaik\",\n    \"email\": \"sidh.rapid@gmail.com\",\n    \"phone\": 8249335342\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}account",
+							"host": [
+								"{{server}}account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addressLine1\": \"Mico Layout\",\n    \"addressLine2\": \"Arekere\",\n    \"landmark\": \"Bannerghetta road\",\n    \"pincode\": \"560076\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}account/5f1dbfad93b0f61c719b0199/address",
+							"host": [
+								"{{server}}account"
+							],
+							"path": [
+								"5f1dbfad93b0f61c719b0199",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Address",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addressLine2\": \"updated addressLine2\",\n    \"pincode\": 760010\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}account/5f1dbfad93b0f61c719b0199/address/5f1dbfe093b0f61c719b019b",
+							"host": [
+								"{{server}}account"
+							],
+							"path": [
+								"5f1dbfad93b0f61c719b0199",
+								"address",
+								"5f1dbfe093b0f61c719b019b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update PIDate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addressLine2\": \"updated addressLine2\",\n    \"pincode\": 760010\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}account/5f1dbfad93b0f61c719b0199/address/5f1dbfe093b0f61c719b019b",
+							"host": [
+								"{{server}}account"
+							],
+							"path": [
+								"5f1dbfad93b0f61c719b0199",
+								"address",
+								"5f1dbfe093b0f61c719b019b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Address",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}account/5f1dbfad93b0f61c719b0199/address/5f1dbfe093b0f61c719b019b",
+							"host": [
+								"{{server}}account"
+							],
+							"path": [
+								"5f1dbfad93b0f61c719b0199",
+								"address",
+								"5f1dbfe093b0f61c719b019b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}account/5f1dbfad93b0f61c719b0199",
+							"host": [
+								"{{server}}account"
+							],
+							"path": [
+								"5f1dbfad93b0f61c719b0199"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}account/5f1dbfad93b0f61c719b0199/orders/2/1",
+							"host": [
+								"{{server}}account"
+							],
+							"path": [
+								"5f1dbfad93b0f61c719b0199",
+								"orders",
+								"2",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buy Same Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"orderId\":\"5f1e5d35a6b755294efffad2\",\n   \"shippingAddress\": {\n        \"addressLine1\": \"Electornic City\",\n        \"pincode\": 560010\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}account/5f1dbfad93b0f61c719b0199/orderAgain",
+							"host": [
+								"{{server}}account"
+							],
+							"path": [
+								"5f1dbfad93b0f61c719b0199",
+								"orderAgain"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "Add Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Product One\",\n    \"productImages\": \"https://google.com\",\n    \"productPrice\": 200,\n    \"category\": \"daily\",\n    \"tags\": [\n        \"utility\",\n        \"always\",\n        \"regular\"\n    ],\n    \"stockCount\": 10,\n    \"seller\": {\n        \"ownerName\": \"Sundar Pichai\",\n        \"ownerPhone\": 8249335342,\n        \"ventureName\": \"Google Inc\",\n        \"address\": {\n            \"addressLine1\": \"Silicon Valley\",\n            \"landmark\": \"California\",\n            \"pincode\": 923933\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}items",
+							"host": [
+								"{{server}}items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Item by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}items/5f1de12f74c0cc21eafe889f",
+							"host": [
+								"{{server}}items"
+							],
+							"path": [
+								"5f1de12f74c0cc21eafe889f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Item",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"stockCount\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}items/5f1de12f74c0cc21eafe889f",
+							"host": [
+								"{{server}}items"
+							],
+							"path": [
+								"5f1de12f74c0cc21eafe889f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}items/5f1de070cfac0121ebaf87c3",
+							"host": [
+								"{{server}}items"
+							],
+							"path": [
+								"5f1de070cfac0121ebaf87c3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Reviews to Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountId\":\"5f1dbfad93b0f61c719b0199\",\n    \"rating\":4.5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}items/5f1de12f74c0cc21eafe889f/review",
+							"host": [
+								"{{server}}items"
+							],
+							"path": [
+								"5f1de12f74c0cc21eafe889f",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Reviews of Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}items/5f1de12f74c0cc21eafe889f/review",
+							"host": [
+								"{{server}}items"
+							],
+							"path": [
+								"5f1de12f74c0cc21eafe889f",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Item by tag",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}items/tags/utility",
+							"host": [
+								"{{server}}items"
+							],
+							"path": [
+								"tags",
+								"utility"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Item by name (regex)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}items/name/product",
+							"host": [
+								"{{server}}items"
+							],
+							"path": [
+								"name",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Item by category (regex)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}items/category/daily",
+							"host": [
+								"{{server}}items"
+							],
+							"path": [
+								"category",
+								"daily"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Add Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"buyer\": \"5f1dbfad93b0f61c719b0199\",\n    \"inventoryItem\": \"5f1de12f74c0cc21eafe889f\",\n    \"paymentMode\": \"UPI\",\n    \"amountPaid\": \"200\",\n    \"shippingAddress\": {\n        \"addressLine1\": \"JP Nagar\",\n        \"pincode\": 560076\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}order",
+							"host": [
+								"{{server}}order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order Summary",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"Shipped\",\n    \"location\": \"Bangalore CANT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}order/5f1e599dfab8c2284bd3a1e8",
+							"host": [
+								"{{server}}order"
+							],
+							"path": [
+								"5f1e599dfab8c2284bd3a1e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order details by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}order/5f1e599dfab8c2284bd3a1e8",
+							"host": [
+								"{{server}}order"
+							],
+							"path": [
+								"5f1e599dfab8c2284bd3a1e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cancellationReason\": \"Address Change\",\n    \"cancellationAction\": \"Refund\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}order/5f1e599dfab8c2284bd3a1e8/cancel",
+							"host": [
+								"{{server}}order"
+							],
+							"path": [
+								"5f1e599dfab8c2284bd3a1e8",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,44 @@
+NodeJS web application which creates Orders for an ecommerce flow. The application consist of Orders, Account, and Inventory collections.
+
+Dependencies Used
+1. Fastify
+2. Fastify Swagger
+3. Mongoose
+4. hapi/boom
+
+To Run application
+npm i 
+npm start
+
+Documentations and collections
+1. Postman documentation https://documenter.getpostman.com/view/4343342/T1DqgcCp
+2. Collections and postman environment can be found under "Postman" directory
+
+List of planned features can be found in "todo" file
+
+Scenarios covered
+1. Accounts
+    a. Can create, and delete accounts and address.
+    b. Can update
+        I. Address details
+        II. Can change Personal Information
+    c. Can view all the orders placed by the account (Paginated data, orders/:itemsPerPage/:pageNumber)
+    d. Can reorder an existing order
+        I. Check if it's not an cancelled order
+        II. Check if there are no items left in Inventory
+        III. Check if order belonged to same account
+
+2. Orders
+    a. Can add orders, view orders
+    b. Update
+        I. Update summary of Orders, i.e where the order is currently
+        II. Cancel Order - Checked if order is already cancelled
+
+3. Inventory
+    a. Can add item to Inventory, delete and update items from Inventory
+    b. Can add and view reviews against each item in the Inventory
+    c. Can search items by
+        I. Name - Regex search
+        II. Category - Regex search
+        III. Tag - direct match from the tags assigned to an item
+
